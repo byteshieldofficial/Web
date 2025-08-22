@@ -1,0 +1,166 @@
+/* style.css - Shared Styles for Byte Shield Website */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0a0f1c;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 20, 35, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid #58a6ff;
+  z-index: 1000;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header h1 {
+  color: #58a6ff;
+  font-size: 1.5rem;
+}
+
+header p {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e6e6e6;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #58a6ff;
+  text-shadow: 0 0 8px #58a6ff;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background: #fff;
+  height: 3px;
+  margin: 4px 0;
+  width: 25px;
+  transition: 0.4s;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #0f1629, #0a0f1c);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #58a6ff;
+  color: #0a0f1c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1f6feb;
+  color: #fff;
+  box-shadow: 0 0 15px #58a6ff;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #58a6ff;
+}
+
+/* Footer */
+footer {
+  background: #0f1629;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #58a6ff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: #0f1629;
+    padding: 60px 20px;
+    transition: 0.4s;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
